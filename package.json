@@ -1,0 +1,27 @@
+{
+  "name": "zjeby-js",
+  "version": "1.0.0",
+  "description": "A School of Foreign Languages Project written in Node.JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelnicewicz/zjeby-js.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/pawelnicewicz/zjeby-js/issues"
+  },
+  "homepage": "https://github.com/pawelnicewicz/zjeby-js#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14"
+  }
+}
