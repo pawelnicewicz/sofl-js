@@ -19,6 +19,6 @@ exports.careers = function(req, res){
   res.render("careers", { description: "description" });
 };
 
-exports.contacts = function(req, res){
-  res.render("contacts", { description: "description" });
+exports.contact = function(req, res){
+  res.render("contact", { description: "description" });
 };

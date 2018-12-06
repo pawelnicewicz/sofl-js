@@ -15,7 +15,7 @@ app.get("/about", site.about);
 app.get("/pricing", site.pricing);
 app.get("/reviews", site.reviews);
 app.get("/careers", site.careers);
-app.get("/contacts", site.contacts);
+app.get("/contact", site.contact);
 
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The sofl-js server has started!"); 
