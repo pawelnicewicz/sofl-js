@@ -1,24 +1,23 @@
 exports.index = function(req, res){
-  res.render("index", { description: "description" });
+  res.render("homepage/index");
 }; 
 
-
 exports.about = function(req, res){
-  res.render("about", { description: "description" });
+  res.render("homepage/about");
 };
 
 exports.pricing = function(req, res){
-  res.render("pricing", { description: "description" });
+  res.render("homepage/pricing");
 };
 
 exports.reviews = function(req, res){
-  res.render("reviews", { description: "description" });
+  res.render("homepage/reviews");
 };
 
 exports.careers = function(req, res){
-  res.render("careers", { description: "description" });
+  res.render("homepage/careers");
 };
 
 exports.contact = function(req, res){
-  res.render("contact", { description: "description" });
+  res.render("homepage/contact");
 };

@@ -1,0 +1,8 @@
+.navbar{
+  background-color: rgba(0, 0, 0, 0.6)!important;
+  transition: 0.2s;
+}
+
+.nav-item{
+  padding-right: 10px;
+}
