@@ -1,5 +1,5 @@
-<% include partials/header %>
-<% include partials/navbar %>
+<%- include("../partials/header", { description: "About" })%>
+<%- include("../partials/navbar", { active: "about" }) %>
 
 <h1>About:</h1>
 <h2>About school:</h2>
@@ -11,4 +11,4 @@
   <li>Marcin Dunlowski - </li>
 </ul>
 
-<% include partials/footer %>
+<% include("../partials/footer") %>
