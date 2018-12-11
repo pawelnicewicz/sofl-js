@@ -4,3 +4,12 @@
   height: 950px;
   background-repeat: repeat;
 }
+
+.text {
+    border: solid;
+    border-radius: 25px;
+    background-color: white;
+    opacity: 0.9;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
