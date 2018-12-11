@@ -1,27 +1,44 @@
-// When the user scrolls the page, execute myFunction 
+// When the user scrolls the page, execute navbarScroll 
 window.onscroll = function() {navbarScroll()};
+
+// When the user clicks the navbar expand button, execute navbarClick
+var button = document.getElementsByClassName("navbar-toggler")[0];
+button.onclick = function() {navbarClick()};
 
 // Get the header
 var navbar = document.getElementById("navbar");
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function navbarScroll() {
-  console.log(sticky);
+  // Get the offset position of the navbar
+  var sticky = navbar.offsetTop;
   if (window.pageYOffset > sticky && window.pageYOffset < (56 + sticky)) {
     navbar.classList.add("sticky");
-    navbar.classList.remove("navbar-transparent");
-    navbar.classList.add("navbar-opaque");
+    if(button.getAttribute("aria-expanded") == "false"){
+      navbar.classList.remove("navbar-transparent");
+      navbar.classList.add("navbar-opaque");
+    }
   }
   else if(window.pageYOffset > (56 + sticky)){
     navbar.classList.add("sticky");
-    navbar.classList.remove("navbar-opaque");
-    navbar.classList.add("navbar-transparent");
+    if(button.getAttribute("aria-expanded") == "false"){
+      navbar.classList.remove("navbar-opaque");
+      navbar.classList.add("navbar-transparent");
+    }
   }
   else {
     navbar.classList.remove("sticky");
+    if(button.getAttribute("aria-expanded") == "false"){
+      navbar.classList.remove("navbar-transparent");
+      navbar.classList.add("navbar-opaque");
+    }
+  }
+
+}
+
+function navbarClick() {
+  var navbar = document.getElementById("navbar");
+  if(button.getAttribute("aria-expanded") == "false"){
     navbar.classList.remove("navbar-transparent");
     navbar.classList.add("navbar-opaque");
   }
