@@ -1,9 +1,11 @@
-var express  = require("express"),
+const express  = require("express"),
     app      = express(),
     mongoose = require("mongoose"),
     dotenv   = require("dotenv").config(),
     path     = require("path"),
-    site     = require("./site");
+    site     = require("./site"),
+    bodyParser = require('body-parser');
+    
 
 mongoose.set('useNewUrlParser', true);
 mongoose.connect(process.env.DB_URL);
