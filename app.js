@@ -31,8 +31,8 @@ app.post('/send-email', function (req, res) {
           port: 465,
           secure: true,
           auth: {
-              user: 'banan541@wp.pl',
-              pass: 'projekt1234'
+              user: process.env.MAIL_USERNAME,
+              pass: process.env.MAIL_PASS
           }
       });
 
@@ -40,8 +40,8 @@ app.post('/send-email', function (req, res) {
           from: '"Michał Banaszek" <banan541@wp.pl>', // sender address
           to: 'banan541@wp.pl', // list of receivers
           subject: "Pytanie o kurs.", // Subject line
-          text: req.body.message, // plain text body
-          //html: '' // html body
+        //text: "Email: " + req.body.email + "Message: " + req.body.message //, // plain text body
+          html: "Email: " + req.body.email + "<br>Message: " + req.body.message
       };
 
       transporter.sendMail(mailOptions, (error, info) => {
