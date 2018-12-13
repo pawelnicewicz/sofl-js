@@ -57,6 +57,3 @@ app.post('/send-email', function (req, res) {
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The sofl-js server has started!"); 
 });
-
-
-

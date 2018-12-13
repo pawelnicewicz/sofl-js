@@ -1,15 +1,58 @@
 .navbar{
   width: 100%;
+  min-height: 45px;
   transition: 0.2s;
+}
+
+.navbar-left-ul{
+  line-height: 45px;
+  height: 45px;
+  margin: inherit;
+  position: relative;
+  left: -40px;
+}
+
+.navbar-left-li{
+  line-height: 45px;
+  height: 45px;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.navbar-brand {
+  padding: 0 5px;
+  height: 45px;
+  line-height: 45px;
+}
+
+#home-icon{
+  width: 10px;
+}
+
+#login-icon{
+  padding-left: 5px;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.navbar-toggle {
+  margin-top: 5.5px;
+  padding: 0 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    line-height: 20px;
+  }
 }
 
 .nav-item{
   padding-right: 10px;
 }
-
-/*.content{*/
-/*  padding-top: 56px;*/
-/*}*/
 
 .sticky {
   position: fixed;
@@ -17,9 +60,71 @@
 }
 
 .navbar-transparent{
-  background-color: rgba(0, 0, 0, 0.2)!important;
+  background-color: rgba(0, 0, 0, 0.4)!important;
 }
 
 .navbar-opaque{
   background-color: rgb(0, 0, 0)!important;
+}
+
+.pre-navbar{
+  width: 100%;
+  height: 45px;
+  background-color: #0a1f0e;
+  transition: 0.2;
+}
+
+.mobile-hidden{
+  visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  .pre-navbar{
+    height: 45px;
+  }
+  .mobile-hidden{
+    visibility: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  #login-icon{
+    visibility: visible!important;
+  }
+}
+
+.pre-navbar-header{
+	font-weight: 900;
+	color: white;
+}
+
+.navbar-brand-div{
+  text-align: center;
+}
+
+.pre-navbar-li{
+  color: white;
+  font-size: 1.25rem;
+  line-height: 30px;
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid white;
+  text-align: center;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.social-media-ul{
+  position: relative;
+  left: -40px;
+}
+
+.login-ul{
+  text-align: right;
+  position: relative;
+  right: 5px;
 }
