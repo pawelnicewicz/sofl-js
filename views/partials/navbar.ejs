@@ -1,11 +1,51 @@
-<div style="background-color:black; height: 20px; ",></div>
-<nav class="navbar navbar-expand-lg navbar-dark navbar-opaque bg-dark" id="navbar">
-  <a class="navbar-brand" href="/">
-    <i class="fas fa-graduation-cap"></i>
-    MPM School
-  </a>
+<div class="container-fluid pre-navbar">
+  <div class="row">
+    <div class="col-4 mobile-hidden">
+      <ul class="social-media-ul">
+        <li class="pre-navbar-li">
+          <i class="fab fa-facebook-f"></i>
+        </li>
+        <li class="pre-navbar-li">
+          <i class="fab fa-twitter"></i>
+        </li>
+        <li class="pre-navbar-li">
+          <i class="fab fa-instagram"></i>
+        </li>
+      </ul>
+    </div>
+    <div class="col-4 navbar-brand-div">
+      <a class="navbar-brand" href="/">
+        <span class="pre-navbar-header">
+          <i class="fas fa-graduation-cap"></i>
+          MPM School
+        </span>
+      </a>
+    </div>
+    <div class="col-4 mobile-hidden">
+      <ul class="login-ul">
+        <li class="pre-navbar-li">
+          <i class="fas fa-user-circle"></i>
+        </li>  
+      </ul>  
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-opaque bg-dark py-0" id="navbar">
+  <ul class="navbar-left-ul">
+    <li class="navbar-left-li">
+      <a class="navbar-brand" href="/">
+        <i class="fas fa-home" id="home-icon"></i>
+      </a>
+    </li>
+    <li class="navbar-left-li">
+      <a class="navbar-brand" href="/">
+        <i class="fas fa-user-circle hidden" id="login-icon"></i>
+      </a>
+    </li> 
+  </ul>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    <span class="fas fa-bars"></span>
   </button>
   <div class="collapse navbar-collapse ml-auto" id="navbarNav">
     <ul class="navbar-nav ml-auto">

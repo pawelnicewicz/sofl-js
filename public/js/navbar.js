@@ -12,18 +12,22 @@ var navbar = document.getElementById("navbar");
 function navbarScroll() {
   // Get the offset position of the navbar
   var sticky = navbar.offsetTop;
-  if (window.pageYOffset > sticky && window.pageYOffset < (56 + sticky)) {
+  var navHeight = navbar.offsetHeight;
+  var loginIcon = document.getElementById("login-icon");
+  if (window.pageYOffset > sticky && window.pageYOffset < (navHeight + sticky)) {
     navbar.classList.add("sticky");
     if(button.getAttribute("aria-expanded") == "false"){
       navbar.classList.remove("navbar-transparent");
       navbar.classList.add("navbar-opaque");
+      loginIcon.classList.add("hidden");
     }
   }
-  else if(window.pageYOffset > (56 + sticky)){
+  else if(window.pageYOffset > (navHeight + sticky)){
     navbar.classList.add("sticky");
     if(button.getAttribute("aria-expanded") == "false"){
       navbar.classList.remove("navbar-opaque");
       navbar.classList.add("navbar-transparent");
+      loginIcon.classList.remove("hidden");
     }
   }
   else {
@@ -31,6 +35,7 @@ function navbarScroll() {
     if(button.getAttribute("aria-expanded") == "false"){
       navbar.classList.remove("navbar-transparent");
       navbar.classList.add("navbar-opaque");
+      loginIcon.classList.add("hidden");
     }
   }
 
