@@ -40,8 +40,8 @@ app.post('/send-email', function (req, res) {
           from: '"Michał Banaszek" <banan541@wp.pl>', // sender address
           to: 'banan541@wp.pl', // list of receivers
           subject: "Pytanie o kurs.", // Subject line
-          text: req.body.body, // plain text body
-          html: '<b>NodeJS Email Tutorial</b>' // html body
+          text: req.body.message, // plain text body
+          //html: '' // html body
       };
 
       transporter.sendMail(mailOptions, (error, info) => {
