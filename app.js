@@ -37,8 +37,8 @@ app.post('/send-email', function (req, res) {
       });
 
  let mailOptions = {
-          from: '"Michał Banaszek" <banan541@wp.pl>', // sender address
-          to: 'banan541@wp.pl', // list of receivers
+          from: process.env.MAIL_USERNAME, // sender address
+          to: process.env.MAIL_USERNAME, // list of receivers
           subject: "Pytanie o kurs.", // Subject line
         //text: "Email: " + req.body.email + "Message: " + req.body.message //, // plain text body
           html: "Email: " + req.body.email + "<br>Message: " + req.body.message
@@ -49,7 +49,7 @@ app.post('/send-email', function (req, res) {
               return console.log(error);
           }
           console.log('Message %s sent: %s', info.messageId, info.response);
-              res.redirect(200, "/");
+              res.redirect("/");
           });
       });
       
