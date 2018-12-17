@@ -26,6 +26,8 @@ exports.contact = function(req, res){
   res.render("homepage/contact");
 };
 
+        
+        //SEND MAIL//
 exports.sendMail = function(req, res){
   let transporter = nodeMailer.createTransport({
           host: 'smtp.wp.pl',
@@ -46,15 +48,22 @@ exports.sendMail = function(req, res){
           html: "Email: " + req.body.email + "<br>Message: " + req.body.message
       };
       
-      transporter.sendMail(mailOptions, (error, info) => {
-          if(validator.validate(req.body.email) == false){
-            return console.log('Email not valid');
-          }
-          if (error) {
+      SendEmail(mailOptions, req.body.email)
+      
+          
+          function SendEmail(mailOptions, email){
+          if(validator.validate(email))
+           {
+             transporter.sendMail(mailOptions, (error, info) => {
+           if (error) {
               return console.log(error);
           }
           console.log('Message %s sent: %s', info.messageId, info.response);
               res.redirect("/");
           });
+           }
+          else {res.redirect("/pricing");
+          return console.log('Email is not valid');}
+                                                  }
       
 };
