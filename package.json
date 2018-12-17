@@ -21,7 +21,9 @@
     "body-parser": "^1.18.3",
     "dotenv": "^6.1.0",
     "ejs": "^2.6.1",
+    "email-validator": "^2.0.4",
     "express": "^4.16.4",
+    "express-flash-messages": "^0.1.1",
     "mongoose": "^5.3.14",
     "nodemailer": "^4.7.0",
     "path": "^0.12.7"
