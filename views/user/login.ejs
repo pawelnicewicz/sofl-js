@@ -1,0 +1,13 @@
+<%- include("../partials/header", { description: "Log In" })%>
+<%- include("../partials/navbar", { active: "home" }) %>
+
+<h1>Log In!</h1>
+<form action="/login" method="post">
+  <input type="text" name="email" placeholder="email">
+  <input type="password" name="password" placeholder="password">
+  <button>Log In!</button>
+</form>
+<div>
+  Not registered yet?  <a href="/register">Click!</a>
+</div>
+<%- include("../partials/footer") %>

@@ -24,8 +24,12 @@
     "email-validator": "^2.0.4",
     "express": "^4.16.4",
     "express-flash-messages": "^0.1.1",
+    "express-session": "^1.15.6",
     "mongoose": "^5.3.14",
     "nodemailer": "^4.7.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
     "path": "^0.12.7"
   }
 }
