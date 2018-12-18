@@ -1,0 +1,52 @@
+const nodeMailer = require("nodemailer"),
+      bodyParser = require("body-parser"),
+      sendMail  = require("../helpers/sendMail");
+
+exports.index = function(req, res){
+  res.render("homepage/index");
+}; 
+
+exports.about = function(req, res){
+  res.render("homepage/about");
+};
+
+exports.pricing = function(req, res){
+  res.render("homepage/pricing");
+};
+
+exports.reviews = function(req, res){
+  res.render("homepage/reviews");
+};
+
+exports.careers = function(req, res){
+  res.render("homepage/careers");
+};
+
+exports.contact = function(req, res){
+  res.render("homepage/contact");
+};
+
+exports.courseRequest = function(req, res){
+  let transporter = nodeMailer.createTransport({
+    host: 'smtp.wp.pl',
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.MAIL_USERNAME,
+      pass: process.env.MAIL_PASS
+    }
+  });
+  
+  let mailOptions = {
+    from: process.env.MAIL_USERNAME, // sender address
+    to: process.env.MAIL_USERNAME, // list of receivers
+    subject: "Pytanie o kurs.", // Subject line
+    html: "Email: " + req.body.email + "<br>Message: " + req.body.message
+  };
+  if(sendMail(transporter, mailOptions, req.body.email)){
+    res.redirect("/");
+  }
+  else{
+   res.redirect("/pricing"); 
+  }
+};

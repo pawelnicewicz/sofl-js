@@ -10,7 +10,8 @@ const express       = require("express"),
       bodyParser    = require("body-parser"),
       passport      = require("passport"),
       LocalStrategy = require("passport-local"),
-      site          = require("./site"),
+      sendMail      = require("./helpers/sendMail"),
+      site          = require("./controllers/siteController"),
       user          = require("./controllers/userController");
     
 //*******************************************************************
@@ -52,7 +53,7 @@ app.get("/pricing", site.pricing);
 app.get("/reviews", site.reviews);
 app.get("/careers", site.careers);
 app.get("/contact", site.contact);
-app.post("/send-email", site.sendMail);
+app.post("/courseRequest", site.courseRequest);
 
 //-------------------------------------------------------------------
 //                     Authentication routes
