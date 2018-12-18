@@ -48,8 +48,13 @@
       </a>
     </li>
     <li class="navbar-left-li">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/login">
         <i class="fas fa-user-circle hidden" id="login-icon"></i>
+      </a>
+    </li> 
+    <li class="navbar-left-li">
+      <a class="navbar-brand" href="/logout">
+        <i class="fas fa-sign-out-alt hidden" id="logout-icon"></i>
       </a>
     </li> 
   </ul>
@@ -103,3 +108,7 @@
     </ul>
   </div>
 </nav>
+
+<script>
+  var showLogout = <%= showLogout %>;
+</script>

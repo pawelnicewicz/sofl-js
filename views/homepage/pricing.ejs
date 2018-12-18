@@ -2,28 +2,24 @@
 <%- include("../partials/navbar", { active: "pricing" }) %>
 
 <div class="content">
-  <div class="homepage-image">
-      
-       
-      <div class = "text">
-
-<div class="form-header">
-  <h2>Ask for course</h2>
-</div>
-<form name="myForm" method="post" action="/courseRequest">
-  <div class="form-field">
-    <h5 for="message">Message:<h5>
-    <textarea class="input" id="message" name="message" rows="4" autofocus></textarea>
-  </div>
-  <div class="form-field">
-    <h5 for="email">Email:</h5>
-    <input class="input" id="email" name="email" type="email" value="" />
-  </div>
-  <div class="form-actions">
-    <button class="btn" type="submit">Send</button>
-  </div>
-</form>
-        </div>
+  <!--<div class = "text">-->
+    <div class="form-header">
+      <h2>Ask for course</h2>
     </div>
+    <form name="myForm" method="post" action="/courseRequest">
+      <div class="form-field">
+        <h5 for="message">Message:<h5>
+        <textarea class="input" id="message" name="message" rows="4" autofocus></textarea>
       </div>
+      <div class="form-field">
+        <h5 for="email">Email:</h5>
+        <input class="input" id="email" name="email" type="email" value="" />
+      </div>
+      <div class="form-actions">
+        <button class="btn" type="submit">Send</button>
+      </div>
+    </form>
+  <!--</div>-->
+</div>
+
 <%- include("../partials/footer") %>
