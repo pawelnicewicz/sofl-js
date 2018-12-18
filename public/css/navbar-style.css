@@ -128,3 +128,11 @@
   position: relative;
   right: 5px;
 }
+
+.user-icon{
+  color: white!important;
+}
+
+.logout-icon{
+  color: white!important;
+}

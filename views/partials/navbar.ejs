@@ -24,8 +24,17 @@
     <div class="col-4 mobile-hidden">
       <ul class="login-ul">
         <li class="pre-navbar-li">
-          <i class="fas fa-user-circle"></i>
-        </li>  
+          <a class="user-icon" href="/login">
+            <i class="fas fa-user-circle"></i>
+          </a>
+        </li>
+        <% if (showLogout){ %>
+        <li class="pre-navbar-li">
+          <a class="logout-icon" href="/logout">
+            <i class="fas fa-sign-out-alt"></i>
+          </a>
+        </li>
+        <% } %>
       </ul>  
     </div>
   </div>
