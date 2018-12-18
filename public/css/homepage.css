@@ -2,15 +2,21 @@
   width: 100%;
 }
 
-.text {
-  border: solid;
-  border-radius: 25px;
-  background-color: white;
-  opacity: 0.9;
-  padding-bottom: 15px;
-  padding-left: 15px;
-}
+/*.text {*/
+/*  border: solid;*/
+/*  border-radius: 25px;*/
+/*  background-color: white;*/
+/*  opacity: 0.9;*/
+/*  padding-bottom: 15px;*/
+/*  padding-left: 15px;*/
+/*}*/
 
 .form-field {
   position: static;
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 70%;
+  }
 }
