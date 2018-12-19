@@ -1,18 +1,9 @@
 body{
-  background: url("http://gdurl.com/p1lP");
+  background: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
 	background-size: cover;
 	font-family: 'Lato', sans-serif;
-	color: white;
-}
-
-.content{
-  width: 90%;
-  margin: auto;
-  background: rgba(0, 0, 0, 0.8);
-  padding-bottom: 2000px;
-  padding-top: 20px;
-  color: white;
+	color: #24292e;
 }
