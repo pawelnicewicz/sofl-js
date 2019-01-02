@@ -13,7 +13,7 @@ module.exports = function(transporter, mailOptions, email){
     return true;
   }
   else {
-    console.log('Email is not valid');
+    console.log('Email is not valid' + email + mailOptions);
     return false;
   }
 };
