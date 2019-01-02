@@ -41,12 +41,13 @@ exports.courseRequest = function(req, res){
     from: process.env.MAIL_USERNAME, // sender address
     to: process.env.MAIL_USERNAME, // list of receivers
     subject: "Pytanie o kurs.", // Subject line
-    html: "Email: " + req.body.email + "<br>Message: " + req.body.message
+    html: "Name: " + req.body.name + "<br>Email: " + req.body.email + "<br>Phone: " + req.body.phone + "<br>Message: " + req.body.message
   };
   if(sendMail(transporter, mailOptions, req.body.email)){
     res.redirect("/");
   }
   else{
+   console.log(req.body);
    res.redirect("/pricing"); 
   }
 };
