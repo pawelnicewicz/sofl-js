@@ -48,11 +48,7 @@ app.use(user.showLogout);
 //                        General routes
 //-------------------------------------------------------------------
 app.get("/", site.index);
-app.get("/about", site.about);
-app.get("/pricing", site.pricing);
-app.get("/reviews", site.reviews);
 app.get("/careers", site.careers);
-app.get("/contact", site.contact);
 app.post("/courseRequest", site.courseRequest);
 
 //-------------------------------------------------------------------
