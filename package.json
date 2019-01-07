@@ -19,6 +19,7 @@
   "homepage": "https://github.com/pawelnicewicz/sofl-js#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cloudinary": "^1.13.2",
     "dotenv": "^6.1.0",
     "ejs": "^2.6.1",
     "email-validator": "^2.0.4",
