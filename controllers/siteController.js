@@ -1,14 +1,22 @@
 const nodeMailer = require("nodemailer"),
       bodyParser = require("body-parser"),
       cloudinary = require("cloudinary"),
-      sendMail  = require("../helpers/sendMail");
+      sendMail   = require("../helpers/sendMail"),
+      Language   = require("../models/languageModel");
 
 exports.index = function(req, res){
   res.render("homepage/index");
 }; 
 
 exports.careers = function(req, res){
-  res.render("homepage/careers");
+  Language.find({}, function(err, languages) {
+    if(err){
+      console.log(err);
+    }
+    else{
+      res.render("homepage/careers", {languages: languages});
+    }
+  });
 };
 
 exports.courseRequest = function(req, res){
@@ -57,13 +65,15 @@ exports.careersRequest = function(req, res){
       pass: process.env.MAIL_PASS
     }
   });
-  
+  let nameWithoutSpaces = req.body.name.split(" ");
+  nameWithoutSpaces = nameWithoutSpaces.join("_");
   let mailOptions = {
     from: process.env.MAIL_USERNAME, // sender address
     to: process.env.MAIL_USERNAME, // list of receivers
     subject: "Candidate's CV", // Subject line
-    html: "Name: " + req.body.name + "<br>Email: " + req.body.email + "<br>Phone: " + req.body.phone + "<br>Message: " + req.body.message,
-    attachments: [{filename: "resume.pdf", path: req.body.cvUrl}]
+    html: "Name: " + req.body.name + "<br>Email: " + req.body.email + "<br>Phone: " + req.body.phone 
+        + "<br>Languages: " + req.body.language.join(", ") + "<br>Message: " + req.body.message,
+    attachments: [{filename: nameWithoutSpaces + "_cv.pdf", path: req.body.cvUrl}]
   };
   if(sendMail(transporter, mailOptions, req.body.email)){
     res.redirect("/");

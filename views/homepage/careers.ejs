@@ -35,13 +35,30 @@
                 <p class="help-block text-danger"></p>
               </div>
             </div>
-            <input type="hidden" name="cvUrl" id="cvUrl">
-            <input type="hidden" name="publicId" id="publicId">
-            <div class="clearfix"></div>
-            <div class="col-lg-12 text-center">
-              <div id="success"></div>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="button">Upload your CV and submit!</button>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h3 class="section-subheading margin-25">Pick which languages you would like to teach *</h3>
             </div>
+          </div>
+          <div class="row">
+            <% languages.forEach(function(language) { %>
+              <div class="input-group mb-3 col-md-4">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <input type="checkbox" name="language" value= <%= language.name %> >
+                  </div>
+                </div>
+                <input type="text" class="form-control checkbox-bg" value= <%= language.name %> disabled>
+              </div>
+            <% }); %>
+          </div>
+          <input type="hidden" name="cvUrl" id="cvUrl">
+          <input type="hidden" name="publicId" id="publicId">
+          <div class="clearfix"></div>
+          <div class="col-lg-12 text-center">
+            <div id="success"></div>
+            <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="button">Upload your CV and submit!</button>
           </div>
         </form>
       </div>
@@ -51,4 +68,5 @@
 
 <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 <script src="/js/dropCloudinary.js"></script>
+<script src="/js/anchorFix.js"></script>
 <%- include("../partials/footer") %>

@@ -413,3 +413,11 @@ section#careersForm :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
 }
+
+.checkbox-bg{
+  background-color: #f4f4f2!important;
+}
+
+.margin-25{
+  margin-bottom: 25px!important;
+}
