@@ -10,6 +10,7 @@ const express       = require("express"),
       bodyParser    = require("body-parser"),
       passport      = require("passport"),
       LocalStrategy = require("passport-local"),
+      cloudinary    = require("cloudinary"),
       sendMail      = require("./helpers/sendMail"),
       site          = require("./controllers/siteController"),
       user          = require("./controllers/userController");
@@ -20,6 +21,15 @@ const express       = require("express"),
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useCreateIndex', true);
 mongoose.connect(process.env.DB_URL);
+
+//*******************************************************************
+//                   CLOUDINARY CONFIGURATION
+//*******************************************************************
+cloudinary.config({ 
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key: process.env.CLOUDINARY_API_KEY, 
+  api_secret: process.env.CLOUDINARY_API_SECRET
+});
 
 //*******************************************************************
 //                    EXPRESS.JS CONFIGURATION
@@ -48,12 +58,9 @@ app.use(user.showLogout);
 //                        General routes
 //-------------------------------------------------------------------
 app.get("/", site.index);
-app.get("/about", site.about);
-app.get("/pricing", site.pricing);
-app.get("/reviews", site.reviews);
 app.get("/careers", site.careers);
-app.get("/contact", site.contact);
 app.post("/courseRequest", site.courseRequest);
+app.post("/careersRequest", site.careersRequest);
 
 //-------------------------------------------------------------------
 //                     Authentication routes

@@ -282,8 +282,7 @@ section h3.section-subheading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../img/map-image.png");
+  background-color: rgb(36, 41, 46);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -358,4 +357,59 @@ section#contact :-ms-input-placeholder {
 .btn-primary:active, .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+}
+
+section#contact iframe{
+  margin-top: 25px;
+}
+
+section#contact{
+  padding-bottom: 25px;
+}
+
+#text-careers{
+  margin-bottom: 20px;
+}
+
+section#careersForm .form-group {
+  margin-bottom: 25px;
+}
+
+section#careersForm .form-group input,
+section#careersForm .form-group textarea {
+  padding: 20px;
+}
+
+section#careersForm .form-group input.form-control {
+  height: auto;
+}
+
+section#careersForm .form-group textarea.form-control {
+  height: 248px;
+}
+
+section#careersForm .form-control:focus {
+  border-color: #fed136;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+section#careersForm ::-webkit-input-placeholder {
+  font-weight: 700;
+  color: #ced4da;
+}
+
+section#careersForm :-moz-placeholder {
+  font-weight: 700;
+  color: #ced4da;
+}
+
+section#careersForm ::-moz-placeholder {
+  font-weight: 700;
+  color: #ced4da;
+}
+
+section#careersForm :-ms-input-placeholder {
+  font-weight: 700;
+  color: #ced4da;
 }
